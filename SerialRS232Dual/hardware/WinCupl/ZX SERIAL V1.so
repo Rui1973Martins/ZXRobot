@@ -1,0 +1,49 @@
+CSIM(WM): CUPL Simulation Program
+Version 5.0a Serial# 
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+CREATED Mon Apr 03 23:41:57 2023
+
+LISTING FOR SIMULATION FILE: ZX SERIAL V1.si
+
+   1: Name     ZX Serial Board;
+   2: PartNo   ATF16V8B-15PU;
+   3: Date     26/03/2023;
+   4: Revision 01;
+   5: Designer Rui Martins;
+   6: Company  Z-Tech;
+   7: Assembly None;
+   8: Location Portugal;
+   9: Device   g16v8ma;
+  10: 
+  11: 
+  12: FIELD H_ADDR = [A15,A14,A13,A12,A11,A10,A9,A8];
+  13: FIELD L_ADDR = [A7,A6,A5];
+  14:
+  15: ORDER: A0, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, !IOREQ, !CSA, !CSB; 
+  16: 
+  17: 
+
+=========================
+                   !     
+                   I     
+                   O!!   
+             AAAAAARCC   
+      AAAAAAA111111ESS   
+      0456789012345QAB   
+=========================
+0001: 00000000000001HH
+0002: 10000000000001HH
+0003: 10000000000000LH
+0004: 11000000000000HL
+0005: 10100000000000HH
+0006: 11010000000000HH
+0007: 10001000000000HH
+0008: 11000100000000HH
+0009: 10000010000000HH
+0010: 11000001000000HH
+0011: 10000000100000HH
+0012: 11000000010000HH
+0013: 10000000001000HH
+0014: 11000000000100HH
+0015: 10000000000010HH
+0016: 11000000000001HH

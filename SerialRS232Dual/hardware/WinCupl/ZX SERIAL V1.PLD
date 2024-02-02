@@ -1,0 +1,96 @@
+Name     ZX Serial Board ;
+PartNo   ATF16V8B-15PU ;
+Date     26/03/2023 ;
+Revision 01 ;
+Designer Rui Martins ;
+Company  Z-Tech ;
+Assembly None ;
+Location Portugal ;
+Device   g16v8ma ; /*  ATF16V8B ; virtual ; */
+
+/*
+Mnemonic:  g16v8a
+Pin Count:  20
+Special Options:  None
+Alternate Part Numbers:  ATF16V8B, ATF16V8BQ, ATF16V8BQL
+Related Mnemonics:  g16v8, g16v8as, g16v8ma, g16v8ms, g16v8s
+
+**************************************************
+Pin#     Function
+     1     CLK/IN
+     2     IN
+     3     IN
+     4     IN
+     5     IN
+     6     IN
+     7     IN
+     8     IN
+     9     IN
+    10     GND
+    11     OE/IN
+    12     IO
+    13     IO
+    14     IO
+    15     IO
+    16     IO
+    17     IO
+    18     IO
+    19     IO
+    20     VCC
+
+**************************************************
+*/
+
+/* PIN 10 =  GND ; */ 
+/* PIN 11 =  OE  ; Not Used */ 
+/* PIN 12 =  NU  ; Not Used */ 
+/* PIN 20 =  VCC ; */ 
+
+/* *************** INPUT PINS *********************/
+PIN  1 =  A0    ; /* ZX ADDR       */ 
+PIN  2 =  A13   ; /* ZX ADDR       */ 
+PIN  3 =  A12   ; /* ZX ADDR       */ 
+PIN  4 =  A14   ; /* ZX ADDR       */ 
+PIN  5 =  A11   ; /* ZX ADDR       */ 
+PIN  6 =  A10   ; /* ZX ADDR       */ 
+PIN  7 =  A9    ; /* ZX ADDR       */ 
+PIN  8 =  A8    ; /* ZX ADDR       */ 
+PIN  9 =  A15   ; /* ZX ADDR       */ 
+
+PIN 15 = !IOREQ ; /* ZX IO Request */ 
+PIN 16 =  A7    ; /* ZX ADDR       */ 
+PIN 17 =  A6    ; /* ZX ADDR       */ 
+PIN 18 =  A5    ; /* ZX ADDR       */ 
+/*PIN 19 =  A4    ; /* ZX ADDR       */ 
+PIN 19 =  HACKED; /* DISABLED    */
+PIN 11 =  A4    ; /* ZX ADDR       */ 
+
+HACKED.OE = 'B'0;   /* disabled output */
+
+/* Force these to be input pins */
+A5.OE = 'B'0 ;
+A6.OE = 'B'0 ;
+A7.OE = 'B'0 ;
+
+
+/* *************** OUTPUT PINS *********************/
+PIN 13 = !CSB   ; /* UART Chip Select B*/ 
+PIN 14 = !CSA   ; /* UART Chip Select A*/ 
+
+CSA.OE = 'B'1	; /* Always ON */
+CSB.OE = 'B'1	; /* Always ON */
+
+
+/* *************** VARIABLES *********************/
+
+/* Z80 (partial) Address */
+FIELD H_ADDR = [ A15..A8 ];
+FIELD L_ADDR = [  A7..A5 ];
+
+
+/* ***************  LOGIC   *********************/
+
+SELECT_ADDR = H_ADDR:'H'00 & L_ADDR:'H'00 ;
+
+CSA = SELECT_ADDR & !A4 & A0 & IOREQ ;
+CSB = SELECT_ADDR &  A4 & A0 & IOREQ ;

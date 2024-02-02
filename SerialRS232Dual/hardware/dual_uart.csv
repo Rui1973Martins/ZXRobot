@@ -1,0 +1,18 @@
+"Qty";"Value";"Device";"Package";"Parts";"Description";"";
+"2";"";"JP1E";"JP1";"JP3, JP4";"JUMPER";"";
+"1";"1 uF 16V";"C0603";"0603";"C23";"CAPACITOR, European symbol";"";
+"1";"1000pF 2KV/DNP";"C1210";"1210";"C29";"CAPACITOR, European symbol";"";
+"1";"100K";"R0603";"0603";"R21";"RESISTOR, European symbol";"";
+"4";"100nF 16V";"C0603";"0603";"C22, C24, C27, C28";"CAPACITOR, European symbol";"";
+"1";"16MHz";"CRYSTALHC49S";"HC49/S";"Q3";"CRYSTAL";"";
+"2";"16pF 16V";"C0603";"0603";"C25, C26";"CAPACITOR, European symbol";"";
+"1";"1M";"R0603";"0603";"R24";"RESISTOR, European symbol";"";
+"1";"1M/DNP";"R0805";"0805";"R22";"RESISTOR, European symbol";"";
+"4";"1uF 16V";"C0603";"0603";"C18, C19, C20, C21";"CAPACITOR, European symbol";"";
+"1";"470R";"R0603";"0603";"R23";"RESISTOR, European symbol";"";
+"1";"ATF16V8BP3";"ATF16V8BP3";"DIL20";"IC11";"High perfomance CMOS (electrically erasable) programmable logic device (PLD)";"";
+"2";"DS1037-09MNAKT74-0CC ";"DB9MALE";"DB9_MALE";"X2, X3";"DB9 Connector";"";
+"6";"JUMPER_SOLDER_1X2";"JUMPER_SOLDER_1X2";"JUMPER_SOLDER_1X2";"SJ1, SJ2, SJ3, SJ4, SJ5, SJ6";"";"";
+"1";"MAX238CWG";"MAX238CWG";"SO24L";"IC12";"";"";
+"1";"TL16C752CPFB";"TL16C752CPFB";"QFP50P900X900X120-48N";"IC9";"Dual UART With 64-Byte FIFO";"";
+"1";"ZX_EDGE_DAUGHTERBOARD";"ZX_EDGE_DAUGHTERBOARD";"ZX-EDGE-DAUGHTERBOARD@1";"CONN2";"";"";

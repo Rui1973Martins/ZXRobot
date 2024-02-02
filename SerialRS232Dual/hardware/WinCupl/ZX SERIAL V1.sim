@@ -1,0 +1,57 @@
+%SIGNAL
+PIN   1 =  A0 
+PIN  11 =  A4 
+PIN  18 =  A5 
+PIN  17 =  A6 
+PIN  16 =  A7 
+PIN   8 =  A8 
+PIN   7 =  A9 
+PIN   6 =  A10 
+PIN   5 =  A11 
+PIN   3 =  A12 
+PIN   2 =  A13 
+PIN   4 =  A14 
+PIN   9 =  A15 
+PIN  14 = !CSA 
+PIN  13 = !CSB 
+PIN  19 =  HACKED 
+PIN  15 = !IOREQ 
+%END
+
+%FIELD
+FIELD H_ADDR = A15,A14,A13,A12,A11,A10,A9,A8
+FIELD L_ADDR = A7,A6,A5
+%END
+
+%EQUATION
+A5.oe  =>
+    0 
+
+A6.oe  =>
+    0 
+
+A7.oe  =>
+    0 
+
+CSA =>
+    A0 & !A4 & !A5 & !A6 & !A7 & !A8 & !A9 & !A10 & !A11 & !A12 & !A13 & !A14 & !A15 & !IOREQ
+
+CSA.oe  =>
+    1 
+
+CSB =>
+    A0 & A4 & !A5 & !A6 & !A7 & !A8 & !A9 & !A10 & !A11 & !A12 & !A13 & !A14 & !A15 & !IOREQ
+
+CSB.oe  =>
+    1 
+
+HACKED.oe  =>
+    0 
+
+SELECT_ADDR =>
+    !A5 & !A6 & !A7 & !A8 & !A9 & !A10 & !A11 & !A12 & !A13 & !A14 & !A15
+
+IOREQ.oe  =>
+    0 
+
+%END
