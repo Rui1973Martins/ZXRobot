@@ -1,0 +1,64 @@
+
+COM_DATA_WRITE  	EQU 0000
+COM_DATA_READ   	EQU 0002
+COM_DATA_NAME   	EQU 0004
+
+COM_DATA_IO     	EQU 0005
+COM_DATA_R_RHR_ 	EQU 0005
+COM_DATA_R_THR_ 	EQU 0005
+COM_DATA_R_DLL_ 	EQU 0005
+
+COM_DATA_R_IER_ 	EQU 0006
+COM_DATA_R_DLH_ 	EQU 0006
+
+COM_DATA_R_IIR_ 	EQU 0007
+COM_DATA_R_FCR_ 	EQU 0007
+COM_DATA_R_AFR_ 	EQU 0007
+COM_DATA_R_EFR_ 	EQU 0007
+
+COM_DATA_R_LCR_ 	EQU 0008
+
+COM_DATA_R_MCR_ 	EQU 0009
+COM_DATA_R_XON1_ 	EQU 0009
+
+COM_DATA_R_LSR_ 	EQU 000A
+COM_DATA_R_XON2_ 	EQU 000A
+
+COM_DATA_R_MSR_ 	EQU 000B
+COM_DATA_R_XOFF1_ 	EQU 000B
+COM_DATA_R_TCR_ 	EQU 000B
+
+COM_DATA_R_SPR_ 	EQU 000C
+COM_DATA_R_XOFF2_ 	EQU 000C
+COM_DATA_R_TLR_ 	EQU 000C
+COM_DATA_R_FIFORdy_ 	EQU 000C
+
+
+FD25:           label COM1_DATA
+FD25:09FD       DEFW of 1 words
+FD27:EDFC       DEFW of 1 words
+FD29:31         DEFB of 1 bytes
+
+05 00	FD2A:01         DEFB of 1 bytes
+06 01	FD2B:03         DEFB of 1 bytes
+07 02	FD2C:05         DEFB of 1 bytes
+08 03	FD2D:07         DEFB of 1 bytes
+09 04	FD2E:09         DEFB of 1 bytes
+0A 05	FD2F:0B         DEFB of 1 bytes
+0B 06	FD30:0D         DEFB of 1 bytes
+0C 07	FD31:0F         DEFB of 1 bytes
+
+
+FD32:           label COM2_DATA
+FD32:17FD       DEFW of 1 words
+FD34:FBFC       DEFW of 1 words
+FD36:32         DEFB of 1 bytes
+
+FD37:11         DEFB of 1 bytes
+FD38:13         DEFB of 1 bytes
+FD39:15         DEFB of 1 bytes
+FD3A:17         DEFB of 1 bytes
+FD3B:19         DEFB of 1 bytes
+FD3C:1B         DEFB of 1 bytes
+FD3D:1D         DEFB of 1 bytes
+FD3E:1F         DEFB of 1 bytes
